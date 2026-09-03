@@ -1,0 +1,119 @@
+.contact {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  padding: var(--space-2xl) 0;
+}
+
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.contact__eyebrow {
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-yellow);
+  margin-bottom: var(--space-sm);
+}
+
+.contact__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--space-md);
+}
+
+.contact__copy {
+  font-size: var(--text-base);
+  color: var(--color-white);
+  opacity: 0.85;
+  margin-bottom: var(--space-lg);
+  max-width: 420px;
+}
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.contact__link {
+  font-size: var(--text-sm);
+  color: var(--color-white);
+  opacity: 0.75;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  width: fit-content;
+}
+
+.contact__link:hover {
+  opacity: 1;
+  color: var(--color-yellow);
+}
+
+.contact__form {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact__form label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.contact__form input,
+.contact__form select,
+.contact__form textarea {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-black);
+  background-color: var(--color-bg);
+}
+
+.contact__form input:focus,
+.contact__form select:focus,
+.contact__form textarea:focus {
+  outline: none;
+  border-color: var(--color-purple);
+}
+
+.contact__form textarea {
+  resize: vertical;
+}
+
+.contact__form .btn {
+  width: 100%;
+}
+
+.contact__feedback {
+  font-size: var(--text-sm);
+  text-align: center;
+}
+
+.contact__feedback--success {
+  color: #1a7a4c;
+}
+
+.contact__feedback--error {
+  color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .contact__inner {
+    grid-template-columns: 1fr;
+  }
+}

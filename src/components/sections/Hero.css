@@ -47,7 +47,7 @@
 .hero__inner {
   position: relative;
   z-index: 1;
-  max-width: 640px;
+  max-width: 760px;
 }
 
 .hero__eyebrow {
@@ -62,7 +62,7 @@
 
 .hero__title {
   font-family: var(--font-heading);
-  font-size: 4.25rem;
+  font-size: clamp(2.75rem, 5.5vw, 10.5rem);
   font-weight: 700;
   line-height: 1.05;
   color: var(--color-white);

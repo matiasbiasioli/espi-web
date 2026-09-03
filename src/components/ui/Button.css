@@ -41,3 +41,7 @@
   background-color: var(--color-purple);
   color: var(--color-white);
 }
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -6,6 +6,7 @@ import ResourcesBanner from "../components/sections/ResourcesBanner";
 import Modality from "../components/sections/Modality";
 import Faq from "../components/sections/Faq";
 import Disclaimer from "../components/sections/Disclaimer";
+import Contact from "../components/sections/Contact";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <Modality/>
       <Disclaimer/>
       <Faq/>
+      <Contact/>
     </>
   );
 }
