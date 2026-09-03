@@ -1,0 +1,19 @@
+.faq {
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-bg);
+}
+
+.faq__eyebrow {
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-purple);
+  margin-bottom: var(--space-xs);
+}
+
+.faq__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: var(--space-lg);
+}

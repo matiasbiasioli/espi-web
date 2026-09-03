@@ -1,0 +1,128 @@
+.modality {
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-bg);
+}
+
+.modality__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+/* En desktop, la imagen queda a la derecha (como en el diseño "reverse") */
+.modality__text {
+  order: 1;
+}
+
+.modality__frame {
+  order: 2;
+  position: relative;
+  padding: var(--space-sm);
+}
+
+.modality__frame::before,
+.modality__frame::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--color-black);
+}
+
+.modality__frame::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.modality__frame::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.modality__placeholder {
+  aspect-ratio: 4 / 5;
+  background-color: var(--color-yellow);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modality__placeholder span {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  color: var(--color-purple);
+  opacity: 0.6;
+}
+
+.modality__eyebrow {
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-purple);
+  margin-bottom: var(--space-sm);
+}
+
+.modality__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: var(--space-md);
+}
+
+.modality__accent-serif {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--color-purple);
+}
+
+.modality__paragraph {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.modality__check-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.modality__check-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-base);
+  color: var(--color-black);
+}
+
+.modality__check-list svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-teal);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .modality__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .modality__text {
+    order: 2;
+  }
+
+  .modality__frame {
+    order: 1;
+  }
+
+  .modality__title {
+    font-size: var(--text-2xl);
+  }
+}

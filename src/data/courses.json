@@ -1,0 +1,23 @@
+[
+  {
+    "id": "microdosis-habitos",
+    "title": "Microdosis y hábitos",
+    "tag": "Taller",
+    "description": "Cómo se construyen cambios sostenidos.",
+    "image": "curso-microdosis.jpg"
+  },
+  {
+    "id": "meditacion-vida-cotidiana",
+    "title": "Meditación y vida cotidiana",
+    "tag": "Taller con Lucas Gamarra",
+    "description": "Herramientas para habitar la mente con más claridad.",
+    "image": "curso-meditacion.jpg"
+  },
+  {
+    "id": "macrodosis-terapeutica",
+    "title": "Macrodosis terapéutica",
+    "tag": "Taller",
+    "description": "Qué tipo de cambio puede abrir este proceso.",
+    "image": "curso-macrodosis.jpg"
+  }
+]

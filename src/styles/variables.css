@@ -1,0 +1,64 @@
+/* ============================================
+   ESPI — Identidad visual centralizada
+   "Rigor clínico. Color humano."
+   ============================================ */
+
+:root {
+  /* ---- Paleta de colores ---- */
+  --color-yellow: #FFD602;      /* color protagonista de marca */
+  --color-purple: #21064E;      /* fondos oscuros / secciones destacadas */
+  --color-purple-light: #6B3FA0; /* variante clara para acentos sobre fondo oscuro */
+  --color-orange: #FF8A1F;      /* acento secundario */
+  --color-teal: #40E2BF;        /* acento secundario */
+  --color-black: #1E1E1C;       /* texto principal */
+  --color-cream: #F6F5F2;       /* fondo base */
+  --color-white: #FFFFFF;
+
+  /* Variantes de uso semántico (facilita cambiar la identidad sin tocar componentes) */
+  --color-bg: var(--color-cream);
+  --color-bg-dark: var(--color-purple);
+  --color-text: var(--color-black);
+  --color-text-inverse: var(--color-white);
+  --color-text-muted: #6B6862;
+  --color-accent: var(--color-yellow);
+  --color-accent-secondary: var(--color-orange);
+  --color-accent-tertiary: var(--color-teal);
+  --color-border: #E4E1D9;
+
+  /* ---- Tipografías ---- */
+  --font-display: "Playfair Display", serif;   /* frases destacadas, citas */
+  --font-heading: "Space Grotesk", sans-serif;  /* títulos */
+  --font-body: "Inter", sans-serif;             /* texto de cuerpo */
+
+  /* ---- Escala tipográfica ---- */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+  --text-4xl: 3.5rem;
+
+  /* ---- Espaciados (escala de 8px) ---- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* ---- Bordes ---- */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  /* ---- Sombras ---- */
+  --shadow-sm: 0 2px 8px rgba(30, 30, 28, 0.06);
+  --shadow-md: 0 8px 24px rgba(30, 30, 28, 0.10);
+
+  /* ---- Layout ---- */
+  --max-width: 1200px;
+  --header-height: 80px;
+}
