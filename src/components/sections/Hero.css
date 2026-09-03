@@ -2,7 +2,10 @@
   position: relative;
   background-color: var(--color-purple);
   color: var(--color-white);
-  padding: var(--space-2xl) 0 calc(var(--space-2xl) + 60px);
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  padding: var(--space-xl) 0 calc(var(--space-xl) + 40px);
   overflow: hidden;
 }
 
@@ -48,6 +51,7 @@
   position: relative;
   z-index: 1;
   max-width: 760px;
+  margin-left: clamp(24px, 20vw, 320px);
 }
 
 .hero__eyebrow {

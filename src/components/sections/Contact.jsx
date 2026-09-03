@@ -72,6 +72,7 @@ function Contact() {
         </div>
 
         <form className="contact__form" onSubmit={handleSubmit}>
+          <div className="contact__row">
           <label>
             Nombre
             <input
@@ -92,6 +93,7 @@ function Contact() {
               required
             />
           </label>
+          </div>
           <label>
             Motivo de consulta
             <select

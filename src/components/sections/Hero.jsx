@@ -20,7 +20,7 @@ function Hero() {
         <div className="hero__dotgrid" />
       </div>
 
-      <div className="container hero__inner">
+      <div className="hero__inner">
         <p className="hero__eyebrow">Espacio de Salud Psicoterapéutico Integral</p>
         <h1 className="hero__title">
           Rigor <span className="hero__accent-serif">clínico.</span>
