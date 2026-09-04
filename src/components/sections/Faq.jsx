@@ -3,16 +3,16 @@ import "./Faq.css";
 
 const FAQ_ITEMS = [
   {
-    question: "[Pregunta frecuente 1 — a definir]",
-    answer: "[Respuesta pendiente.]",
+    question: "[Pregunta frecuente 1]",
+    answer: "[Respuesta]",
   },
   {
-    question: "[Pregunta frecuente 2 — a definir]",
-    answer: "[Respuesta pendiente.]",
+    question: "[Pregunta frecuente 2]",
+    answer: "[Respuesta]",
   },
   {
-    question: "[Pregunta frecuente 3 — a definir]",
-    answer: "[Respuesta pendiente.]",
+    question: "[Pregunta frecuente 3]",
+    answer: "[Respuesta]",
   },
 ];
 
