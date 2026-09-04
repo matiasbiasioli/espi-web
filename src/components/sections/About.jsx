@@ -13,7 +13,7 @@ function About() {
           />
         </div>
         <div className="about__text">
-          <p className="about__eyebrow">Cuerpo · mente · espíritu</p>
+          <p className="about__eyebrow">Cuerpo · Mente · Dimensión del espíritu</p>
           <h2 className="about__title">
             Un espacio pensado como{" "}
             <span className="about__accent-serif">acompañamiento integral</span>
