@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 import Team from "./pages/Team";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
+import Workshops from "./pages/Workshops";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/equipo" element={<Team />} />
           <Route path="/recursos" element={<Resources />} />
           <Route path="/contacto" element={<Contact />} />
+          <Route path="/talleres" element={<Workshops />} />
         </Routes>
       </main>
       <Footer />

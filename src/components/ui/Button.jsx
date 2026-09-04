@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import "./Button.css";
 
-function Button({ to, href, variant = "primary", children, ...props }) {
-  const className = `btn btn--${variant}`;
+function Button({ to, href, variant = "primary", size = "md", children, ...props }) {
+  const className = `btn btn--${variant} btn--${size}`;
 
   if (to) {
     return (

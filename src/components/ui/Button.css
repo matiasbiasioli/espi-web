@@ -17,6 +17,10 @@
 .btn--primary:hover {
   background-color: var(--color-white);
 }
+.btn--outline.btn--lg {
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--text-sm);
+}
 
 .btn--ghost {
   background-color: transparent;

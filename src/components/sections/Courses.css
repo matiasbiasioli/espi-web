@@ -24,6 +24,12 @@
   gap: var(--space-md);
 }
 
+.courses__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
 @media (max-width: 900px) {
   .courses__grid {
     grid-template-columns: repeat(2, 1fr);
