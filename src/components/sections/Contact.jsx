@@ -47,7 +47,7 @@ function Contact() {
           <p className="contact__eyebrow">Contacto</p>
           <h2 className="contact__title">Escribinos</h2>
           <p className="contact__copy">
-            Contanos brevemente tu consulta y te respondemos para coordinar un
+            Contanos tu consulta y te respondemos para coordinar un
             primer encuentro.
           </p>
           <div className="contact__links">

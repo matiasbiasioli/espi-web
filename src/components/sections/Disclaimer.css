@@ -3,18 +3,19 @@
   background-color: var(--color-bg);
 }
 
-.disclaimer__container {
-  max-width: 760px;
-}
-
 .disclaimer__box {
   display: flex;
+  justify-content: center;
   gap: var(--space-md);
   background-color: var(--color-white);
   border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-yellow);
   border-radius: var(--radius-lg);
   padding: var(--space-lg);
   box-shadow: var(--shadow-sm);
+}
+.disclaimer__content {
+  max-width: 640px;
 }
 
 .disclaimer__icon {
@@ -34,17 +35,16 @@
 .disclaimer__title {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: var(--text-lg);
+  font-size: var(--text-2xl);
   color: var(--color-black);
   margin-bottom: var(--space-sm);
 }
 
 .disclaimer__text {
-  font-size: var(--text-sm);
+  font-size: var(--text-lg);
   color: var(--color-text-muted);
   margin-bottom: var(--space-xs);
 }
-
 .disclaimer__text:last-child {
   margin-bottom: 0;
 }

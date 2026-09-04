@@ -35,14 +35,14 @@
 
 .resources-banner__title {
   font-family: var(--font-heading);
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   font-weight: 700;
   color: var(--color-purple);
   margin-bottom: 4px;
 }
 
 .resources-banner__copy {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-purple);
   opacity: 0.85;
 }
