@@ -1,0 +1,131 @@
+/* ---- Origen ---- */
+.institutional-origin {
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-bg);
+}
+
+.institutional-origin__inner {
+  max-width: 760px;
+}
+
+.institutional-origin__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: var(--space-lg);
+  line-height: 1.25;
+}
+
+.institutional-accent {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-purple);
+}
+
+.institutional-origin__text {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+/* ---- Pilares ---- */
+.institutional-pillars {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  padding: var(--space-2xl) 0;
+}
+
+.institutional-pillars__eyebrow {
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-yellow);
+  margin-bottom: var(--space-xs);
+}
+
+.institutional-pillars__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+}
+
+.institutional-pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.institutional-pillars__card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.institutional-pillars__card h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.institutional-pillars__card p {
+  font-size: var(--text-sm);
+  opacity: 0.75;
+}
+
+/* ---- Cita ---- */
+.institutional-quote {
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-bg);
+}
+
+.institutional-quote__box {
+  background-color: var(--color-yellow);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin: 0;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.institutional-quote__box p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-xl);
+  color: var(--color-purple);
+  line-height: 1.4;
+}
+
+/* ---- CTA ---- */
+.institutional-cta {
+  padding: var(--space-2xl) 0 var(--space-2xl);
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+.institutional-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.institutional-cta__inner h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: var(--color-black);
+  max-width: 480px;
+}
+
+@media (max-width: 768px) {
+  .institutional-pillars__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .institutional-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

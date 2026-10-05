@@ -1,0 +1,119 @@
+.footer {
+  background-color: var(--color-purple);
+  color: var(--color-text-inverse);
+  padding: var(--space-xl) 0 var(--space-lg);
+  margin-top: auto;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr auto;
+  gap: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer__brand-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.footer__logo img {
+  height: 115px;
+  width: auto;
+  /* si el logo original es oscuro, lo volvemos blanco para que se lea sobre el fondo púrpura */
+  filter: brightness(0) invert(1);
+}
+
+.footer__tagline {
+  font-size: var(--text-sm);
+  opacity: 0.7;
+  max-width: 220px;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.footer__nav-link {
+  font-size: var(--text-sm);
+  color: var(--color-white);
+  opacity: 0.8;
+  width: fit-content;
+}
+
+.footer__nav-link:hover {
+  opacity: 1;
+  color: var(--color-yellow);
+}
+
+.footer__social {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.footer__social-link {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.footer__social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer__social-link:hover {
+  background-color: var(--color-yellow);
+  border-color: var(--color-yellow);
+  color: var(--color-purple);
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  padding-top: var(--space-md);
+}
+
+.footer__copy {
+  font-size: var(--text-xs);
+  opacity: 0.6;
+}
+
+.footer__credit {
+  font-size: var(--text-xs);
+  color: var(--color-white);
+  opacity: 0.6;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer__credit:hover {
+  opacity: 1;
+  color: var(--color-yellow);
+}
+
+@media (max-width: 768px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

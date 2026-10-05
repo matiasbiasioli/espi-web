@@ -1,0 +1,142 @@
+.navbar {
+  position: relative;
+}
+
+.navbar__list {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.navbar__link {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  padding: var(--space-xs) 0;
+  border-bottom: 2px solid transparent;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: var(--color-purple);
+}
+
+.navbar__link--active {
+  border-bottom-color: var(--color-yellow);
+}
+
+/* ---- Botón hamburguesa ---- */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  padding: 0;
+  position: relative;
+  z-index: 101; /* por encima del overlay */
+}
+
+.navbar__toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-black);
+  border-radius: var(--radius-full);
+  transition:
+    transform 0.3s ease,
+    opacity 0.2s ease,
+    background-color 0.3s ease;
+}
+
+/* Con el overlay oscuro de fondo, el ícono pasa a blanco */
+.navbar__toggle--open span {
+  background-color: var(--color-white);
+}
+
+.navbar__toggle--open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar__toggle--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__toggle--open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---- Mobile: menú fullscreen ---- */
+@media (max-width: 768px) {
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__list {
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    background-color: var(--color-purple);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s;
+  }
+
+  .navbar__list--open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .navbar__list li {
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .navbar__list--open li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .navbar__link {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    color: var(--color-white);
+  }
+}
+
+.navbar__link--cta {
+  background-color: var(--color-yellow);
+  color: var(--color-purple);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  border-bottom: none;
+}
+
+.navbar__link--cta:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .navbar__link--cta {
+    color: var(--color-purple);
+  }
+}

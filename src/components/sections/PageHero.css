@@ -1,0 +1,25 @@
+.page-hero {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  padding: var(--space-xl) 0;
+}
+
+.page-hero__eyebrow {
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-yellow);
+  margin-bottom: var(--space-xs);
+}
+
+.page-hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .page-hero__title {
+    font-size: var(--text-3xl);
+  }
+}
