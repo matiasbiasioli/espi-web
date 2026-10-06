@@ -6,7 +6,7 @@ export const SERVICES = [
     title: "Psicoterapia",
     shortDescription: "[Descripción]",
     longDescription:
-      "[Lorem ipsum — descripción real de en qué consiste el servicio de Psicoterapia, a quién está dirigido y qué se puede esperar del proceso.]",
+      "[Lorem ipsum — en qué consiste el servicio de Psicoterapia, a quién está dirigido y qué se puede esperar del proceso.]",
     icon: <LuBrain />,
   },
   {
@@ -14,7 +14,7 @@ export const SERVICES = [
     title: "Fitomedicina",
     shortDescription: "[Descripción]",
     longDescription:
-      "[Lorem ipsum — descripción real de en qué consiste el servicio de Fitomedicina, a quién está dirigido y qué se puede esperar del proceso.]",
+      "[Lorem ipsum — en qué consiste el servicio de Fitomedicina, a quién está dirigido y qué se puede esperar del proceso.]",
     icon: <LuLeaf />,
   },
   {
@@ -22,7 +22,7 @@ export const SERVICES = [
     title: "Herramientas supervisadas",
     shortDescription: "[Descripción]",
     longDescription:
-      "[Lorem ipsum — descripción real de en qué consisten las herramientas supervisadas, a quién está dirigido y qué se puede esperar del proceso.]",
+      "[Lorem ipsum — en qué consisten las herramientas supervisadas, a quién está dirigido y qué se puede esperar del proceso.]",
     icon: <LuShieldCheck />,
   },
   {
@@ -30,7 +30,7 @@ export const SERVICES = [
     title: "Formación para profesionales",
     shortDescription: "[Descripción]",
     longDescription:
-      "[Lorem ipsum — descripción real de en qué consiste la formación para profesionales, a quién está dirigida y qué se puede esperar.]",
+      "[Lorem ipsum — en qué consiste la formación para profesionales, a quién está dirigida y qué se puede esperar.]",
     icon: <LuGraduationCap />,
   },
 ];

@@ -11,8 +11,8 @@ const PROCESS_STEPS = [
 ];
 
 const FAQ_ITEMS = [
-  { question: "¿Cuánto dura un proceso?", answer: "[Respuesta pendiente.]" },
-  { question: "¿Es presencial u online?", answer: "Podés elegir la modalidad que mejor se adapte a vos — más información en la sección Presencial y online del Inicio." },
+  { question: "¿Cuánto dura un proceso?", answer: "[Respuesta]" },
+  { question: "¿Es presencial u online?", answer: "Podés elegir la modalidad que mejor se adapte a vos" },
 ];
 
 function ServicesPage() {
