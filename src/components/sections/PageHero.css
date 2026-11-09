@@ -1,5 +1,5 @@
 .page-hero {
-  background-color: var(--color-purple);
+  background-color: var(--color-bg-dark);
   color: var(--color-white);
   padding: var(--space-xl) 0;
 }

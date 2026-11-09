@@ -6,7 +6,7 @@
 .courses__eyebrow {
   font-size: var(--text-sm);
   font-style: italic;
-  color: var(--color-purple);
+  color: var(--color-olive);
   margin-bottom: var(--space-xs);
 }
 
@@ -14,7 +14,7 @@
   font-family: var(--font-heading);
   font-size: var(--text-3xl);
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--color-text);
   margin-bottom: var(--space-lg);
 }
 

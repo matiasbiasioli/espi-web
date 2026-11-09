@@ -29,7 +29,7 @@
 .services-detail__icon {
   width: 64px;
   height: 64px;
-  color: var(--color-purple);
+  color: var(--color-olive);
 }
 
 .services-detail__icon svg {
@@ -40,7 +40,7 @@
 .services-detail__text h2 {
   font-family: var(--font-heading);
   font-size: var(--text-2xl);
-  color: var(--color-black);
+  color: var(--color-text);
   margin-bottom: var(--space-xs);
 }
 
@@ -52,7 +52,7 @@
 
 /* ---- Proceso ---- */
 .services-process {
-  background-color: var(--color-purple);
+  background-color: var(--color-bg-dark);
   color: var(--color-white);
   padding: var(--space-2xl) 0;
 }
@@ -88,7 +88,7 @@
   height: 40px;
   border-radius: var(--radius-full);
   background-color: var(--color-yellow);
-  color: var(--color-purple);
+  color: var(--color-bg-dark);
   font-family: var(--font-heading);
   font-weight: 700;
   display: flex;
@@ -117,14 +117,14 @@
 .services-faq__eyebrow {
   font-size: var(--text-sm);
   font-style: italic;
-  color: var(--color-purple);
+  color: var(--color-olive);
   margin-bottom: var(--space-xs);
 }
 
 .services-faq__title {
   font-family: var(--font-heading);
   font-size: var(--text-3xl);
-  color: var(--color-black);
+  color: var(--color-text);
   margin-bottom: var(--space-lg);
 }
 
@@ -146,7 +146,7 @@
 .services-cta__inner h2 {
   font-family: var(--font-heading);
   font-size: var(--text-2xl);
-  color: var(--color-black);
+  color: var(--color-text);
   max-width: 480px;
 }
 

@@ -21,14 +21,14 @@
   font-family: var(--font-heading);
   font-size: var(--text-base);
   font-weight: 500;
-  color: var(--color-black);
+  color: var(--color-text);
 }
 
 .accordion-icon {
   flex-shrink: 0;
   font-size: var(--text-xl);
   font-weight: 400;
-  color: var(--color-purple);
+  color: var(--color-olive);
   transition: transform 0.25s ease;
 }
 

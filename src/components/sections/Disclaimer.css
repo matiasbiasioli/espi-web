@@ -23,7 +23,7 @@
   width: 32px;
   height: 32px;
   border-radius: var(--radius-full);
-  background-color: var(--color-black);
+  background-color: var(--color-text);
   color: var(--color-white);
   display: flex;
   align-items: center;
@@ -36,7 +36,7 @@
   font-family: var(--font-display);
   font-style: italic;
   font-size: var(--text-2xl);
-  color: var(--color-black);
+  color: var(--color-text);
   margin-bottom: var(--space-sm);
 }
 
@@ -50,7 +50,7 @@
 }
 
 .disclaimer__text strong {
-  color: var(--color-black);
+  color: var(--color-text);
   font-weight: 600;
 }
 

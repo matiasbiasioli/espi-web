@@ -4,30 +4,29 @@
 
 :root {
   /* ---- Paleta de colores ---- */
-  --color-yellow: #FFD602;      /* color protagonista de marca */
-  --color-purple: #21064E;      /* fondos oscuros / secciones destacadas */
-  --color-purple-light: #6B3FA0; /* variante clara para acentos sobre fondo oscuro */
-  --color-orange: #FF8A1F;      /* acento secundario */
-  --color-teal: #40E2BF;        /* acento secundario */
-  --color-black: #1E1E1C;       /* texto principal */
-  --color-cream: #F6F5F2;       /* fondo base */
+  --color-yellow: #FFD21A;      /* Amarillo Solar — color protagonista de marca */
+  --color-carbon: #20231E;      /* fondos oscuros / secciones destacadas / texto principal */
+  --color-olive: #71845B;       /* Verde Oliva — acento secundario */
+  --color-sage: #B9C8AA;        /* Verde Salvia — acento terciario */
+  --color-cream: #FAF9F6;       /* Blanco Cálido — fondo base */
+  --color-gray: #E9E8E1;        /* Gris Neutro — bordes, divisores */
   --color-white: #FFFFFF;
 
   /* Variantes de uso semántico (facilita cambiar la identidad sin tocar componentes) */
   --color-bg: var(--color-cream);
-  --color-bg-dark: var(--color-purple);
-  --color-text: var(--color-black);
+  --color-bg-dark: var(--color-carbon);
+  --color-text: var(--color-carbon);
   --color-text-inverse: var(--color-white);
   --color-text-muted: #6B6862;
   --color-accent: var(--color-yellow);
-  --color-accent-secondary: var(--color-orange);
-  --color-accent-tertiary: var(--color-teal);
-  --color-border: #E4E1D9;
+  --color-accent-secondary: var(--color-olive);
+  --color-accent-tertiary: var(--color-sage);
+  --color-border: var(--color-gray);
 
   /* ---- Tipografías ---- */
-  --font-display: "Playfair Display", serif;   /* frases destacadas, citas */
-  --font-heading: "Space Grotesk", sans-serif;  /* títulos */
-  --font-body: "Inter", sans-serif;             /* texto de cuerpo */
+  --font-display: "Playfair Display", serif;  /* titulares y mensajes principales */
+  --font-heading: "Jost", sans-serif;          /* subtítulos, navegación */
+  --font-body: "Jost", sans-serif;             /* cuerpo de texto */
 
   /* ---- Escala tipográfica ---- */
   --text-xs: 0.75rem;
@@ -54,8 +53,8 @@
   --radius-full: 999px;
 
   /* ---- Sombras ---- */
-  --shadow-sm: 0 2px 8px rgba(30, 30, 28, 0.06);
-  --shadow-md: 0 8px 24px rgba(30, 30, 28, 0.10);
+  --shadow-sm: 0 2px 8px rgba(32, 35, 30, 0.06);
+  --shadow-md: 0 8px 24px rgba(32, 35, 30, 0.10);
 
   /* ---- Layout ---- */
   --max-width: 1200px;

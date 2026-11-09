@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--color-purple);
+  background-color: var(--color-bg-dark);
   color: var(--color-text-inverse);
   padding: var(--space-xl) 0 var(--space-lg);
   margin-top: auto;
@@ -22,7 +22,7 @@
 .footer__logo img {
   height: 115px;
   width: auto;
-  /* si el logo original es oscuro, lo volvemos blanco para que se lea sobre el fondo púrpura */
+  /* si el logo original es oscuro, lo volvemos blanco para que se lea sobre el fondo oscuro */
   filter: brightness(0) invert(1);
 }
 
@@ -76,7 +76,7 @@
 .footer__social-link:hover {
   background-color: var(--color-yellow);
   border-color: var(--color-yellow);
-  color: var(--color-purple);
+  color: var(--color-bg-dark);
 }
 
 .footer__bottom {

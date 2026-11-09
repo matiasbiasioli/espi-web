@@ -1,5 +1,5 @@
 .services {
-  background-color: var(--color-purple);
+  background-color: var(--color-bg-dark);
   color: var(--color-white);
   padding: var(--space-2xl) 0;
 }

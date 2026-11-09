@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  background-color: var(--color-purple);
+  background-color: var(--color-bg-dark);
   color: var(--color-white);
   min-height: calc(100vh - var(--header-height));
   display: flex;
@@ -20,7 +20,7 @@
   position: absolute;
   width: 320px;
   height: 320px;
-  color: var(--color-purple-light);
+  color: var(--color-sage);
   opacity: 0.35;
   top: -60px;
   right: -60px;
@@ -84,7 +84,7 @@
   font-family: var(--font-display);
   font-style: italic;
   background-color: var(--color-yellow);
-  color: var(--color-purple);
+  color: var(--color-bg-dark);
   padding: 2px var(--space-xs);
   line-height: 1.3;
 }

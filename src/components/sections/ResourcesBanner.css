@@ -13,7 +13,7 @@
   width: 48px;
   height: 48px;
   flex-shrink: 0;
-  color: var(--color-purple);
+  color: var(--color-bg-dark);
 }
 
 .resources-banner__icon svg {
@@ -28,7 +28,7 @@
 .resources-banner__eyebrow {
   font-size: var(--text-sm);
   font-style: italic;
-  color: var(--color-purple);
+  color: var(--color-bg-dark);
   opacity: 0.8;
   margin-bottom: 2px;
 }
@@ -37,24 +37,24 @@
   font-family: var(--font-heading);
   font-size: var(--text-3xl);
   font-weight: 700;
-  color: var(--color-purple);
+  color: var(--color-bg-dark);
   margin-bottom: 4px;
 }
 
 .resources-banner__copy {
   font-size: var(--text-base);
-  color: var(--color-purple);
+  color: var(--color-bg-dark);
   opacity: 0.85;
 }
 
 .resources-banner__inner .btn--primary {
-  background-color: var(--color-purple);
+  background-color: var(--color-bg-dark);
   color: var(--color-white);
   flex-shrink: 0;
 }
 
 .resources-banner__inner .btn--primary:hover {
-  background-color: var(--color-black);
+  background-color: var(--color-text);
 }
 
 @media (max-width: 640px) {
