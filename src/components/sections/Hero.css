@@ -1,11 +1,17 @@
 .hero {
+  background-color: var(--color-bg);
+  padding: var(--space-sm);
+}
+
+.hero__card {
   position: relative;
   background-color: var(--color-bg-dark);
   color: var(--color-white);
-  min-height: calc(100vh - var(--header-height));
+  border-radius: var(--radius-lg);
+  min-height: calc(100vh - var(--header-height) - var(--space-sm) * 2);
   display: flex;
   align-items: center;
-  padding: var(--space-xl) 0 calc(var(--space-xl) + 40px);
+  padding: var(--space-xl) 0;
   overflow: hidden;
 }
 
@@ -104,26 +110,17 @@
   flex-wrap: wrap;
 }
 
-.hero__ribbon {
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  line-height: 0;
-}
-
-.hero__ribbon svg {
-  width: 100%;
-  height: 70px;
-}
-
-.hero__ribbon path {
-  fill: none;
-  stroke: var(--color-yellow);
-  stroke-width: 3;
-}
-
 @media (max-width: 768px) {
+  .hero {
+    padding: var(--space-sm);
+  }
+
+  .hero__card {
+    border-radius: var(--radius-md);
+    min-height: auto;
+    padding: var(--space-xl) 0;
+  }
+
   .hero__inner {
     margin-left: auto;
     margin-right: auto;

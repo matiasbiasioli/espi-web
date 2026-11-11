@@ -1,23 +1,38 @@
 [
   {
-    "id": "miembro-1",
-    "name": "[Nombre profesional]",
-    "role": "[Especialidad]",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
-    "image": null
+    "id": "yona-sandoval-ramos",
+    "name": "Dra. Yona Sandoval Ramos",
+    "role": "Psiquiatra y psicoterapeuta",
+    "badge": "Cofundadora de ESPI",
+    "image": "Yona.jpg",
+    "bio": [
+      "Médica graduada con honores de la Universidad de Buenos Aires (UBA). Realizó su residencia en Psiquiatría en el Hospital General de Agudos Carlos G. Durand, donde también se desempeñó como Jefa de Residentes.",
+      "Su formación integra la psiquiatría, la psicoterapia Gestalt y el abordaje de los trastornos del ánimo, junto con estudios en fitomedicina, adaptógenos, cannabis medicinal y terapias asistidas con psicodélicos.",
+      "Acompaña a personas neurodivergentes desde una perspectiva neuroafirmativa, integradora y respetuosa de la singularidad. Su práctica busca aliviar el sufrimiento psíquico y promover la autonomía, articulando evidencia científica, escucha clínica y una mirada integral de la persona."
+    ]
   },
   {
-    "id": "miembro-2",
-    "name": "[Nombre profesional]",
-    "role": "[Especialidad]",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
-    "image": null
+    "id": "santiago-cabrera-castilla",
+    "name": "Dr. Santiago Cabrera Castilla",
+    "role": "Médico clínico y gastroenterólogo",
+    "badge": "Cofundador de ESPI",
+    "image": "Santi.jpg",
+    "bio": [
+      "Médico egresado de la Universidad de Buenos Aires. Realizó su residencia en el Hospital de Clínicas José de San Martín, donde se formó en Medicina Interna y Gastroenterología. Cuenta además con formación de posgrado en estas especialidades y diplomaturas en Diabetología, Fitoterapia y Medicina Cannábica.",
+      "Su formación también incluye las artes plásticas y el Tantra, experiencias que enriquecen su mirada sobre el cuerpo y la salud. Forma parte de Red Espora, un grupo de estudio e investigación sobre psilocibina, y ha profundizado en fitomedicina y adaptógenos.",
+      "Actualmente desarrolla su práctica clínica y gastroenterológica en distintos ámbitos, acompaña a personas del colectivo LGBTIQ+ y coordina talleres de salud orientados a fortalecer hábitos saludables desde una perspectiva integral."
+    ]
   },
   {
-    "id": "miembro-3",
-    "name": "[Nombre profesional]",
-    "role": "[Especialidad]",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
-    "image": null
+    "id": "eleonora-crusate",
+    "name": "Eleonora Crusate",
+    "role": "Facilitadora, divulgadora y responsable de relaciones públicas",
+    "badge": "Cofundadora de ESPI",
+    "image": "Eleonora.jpeg",
+    "bio": [
+      "Eleonora cuenta con una amplia trayectoria en el campo de las terapias asistidas con psicodélicos en Argentina. Su recorrido comenzó a partir de su experiencia en el cultivo y la autoexploración, y se fue enriqueciendo con el estudio de la información científica, la historia y el intercambio con personas dedicadas a estas prácticas.",
+      "Como facilitadora, acompaña a las personas durante la experiencia, ofreciendo presencia y sostén en un momento que requiere escucha, cuidado y atención. Además, ha contribuido a construir redes entre profesionales y referentes del campo, promoviendo el intercambio y la articulación entre distintos saberes.",
+      "En ESPI, participa en la facilitación de procesos, la divulgación y el desarrollo de vínculos que fortalecen el trabajo interdisciplinario."
+    ]
   }
 ]

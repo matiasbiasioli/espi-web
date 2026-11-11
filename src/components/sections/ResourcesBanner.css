@@ -1,5 +1,11 @@
 .resources-banner {
+  background-color: var(--color-bg);
+  padding: var(--space-sm);
+}
+
+.resources-banner__box {
   background-color: var(--color-yellow);
+  border-radius: var(--radius-lg);
   padding: var(--space-xl) 0;
 }
 
@@ -62,5 +68,11 @@
     flex-direction: column;
     text-align: center;
     gap: var(--space-md);
+  }
+}
+@media (max-width: 768px) {
+  .resources-banner__box {
+    border-radius: var(--radius-md);
+    padding: var(--space-lg) 0;
   }
 }

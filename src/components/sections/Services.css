@@ -1,6 +1,12 @@
 .services {
+  background-color: var(--color-bg);
+  padding: var(--space-sm);
+}
+
+.services__box {
   background-color: var(--color-bg-dark);
   color: var(--color-white);
+  border-radius: var(--radius-lg);
   padding: var(--space-2xl) 0;
 }
 
@@ -62,5 +68,12 @@
 @media (max-width: 640px) {
   .services__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .services__box {
+    border-radius: var(--radius-md);
+    padding: var(--space-xl) 0;
   }
 }

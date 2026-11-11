@@ -15,18 +15,13 @@
   font-size: var(--text-3xl);
   font-weight: 700;
   color: var(--color-text);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
 }
 
-.team-page__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
+.team-page__intro {
+  max-width: 720px;
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
 }
 
-@media (max-width: 768px) {
-  .team-page__grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
-  }
-}
