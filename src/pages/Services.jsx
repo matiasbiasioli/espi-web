@@ -1,18 +1,32 @@
 import PageHero from "../components/sections/PageHero";
 import Accordion from "../components/ui/Accordion";
 import Button from "../components/ui/Button";
-import { SERVICES } from "../data/servicesData";
+import { SERVICES, SERVICES_INTRO } from "../data/servicesData";
 import "./Services.css";
 
 const PROCESS_STEPS = [
-  { title: "Admisión personalizada", description: "Evaluamos tus necesidades para orientarte con el equipo más adecuado." },
-  { title: "Evaluación", description: "[Lorem ipsum — descripción del paso de evaluación clínica.]" },
-  { title: "Plan de acompañamiento", description: "[Lorem ipsum — descripción de cómo se arma el plan de trabajo.]" },
+  {
+    title: "Admisión personalizada",
+    description:
+      "Evaluamos tus necesidades para orientarte con el equipo más adecuado.",
+  },
+  {
+    title: "Evaluación",
+    description: "[Lorem ipsum — descripción del paso de evaluación clínica.]",
+  },
+  {
+    title: "Plan de acompañamiento",
+    description:
+      "[Lorem ipsum — descripción de cómo se arma el plan de trabajo.]",
+  },
 ];
 
 const FAQ_ITEMS = [
   { question: "¿Cuánto dura un proceso?", answer: "[Respuesta]" },
-  { question: "¿Es presencial u online?", answer: "Podés elegir la modalidad que mejor se adapte a vos" },
+  {
+    question: "¿Es presencial u online?",
+    answer: "Podés elegir la modalidad que mejor se adapte a vos",
+  },
 ];
 
 function ServicesPage() {
@@ -22,9 +36,15 @@ function ServicesPage() {
 
       <section className="services-detail">
         <div className="container">
-          {SERVICES.map(({ id, title, longDescription, icon }, index) => (
+          <p className="services-detail__intro">{SERVICES_INTRO}</p>
+
+          {SERVICES.map(({ id, title, description, icon }, index) => (
             <article
-              className={index % 2 === 1 ? "services-detail__row services-detail__row--reverse" : "services-detail__row"}
+              className={
+                index % 2 === 1
+                  ? "services-detail__row services-detail__row--reverse"
+                  : "services-detail__row"
+              }
               key={id}
             >
               <div className="services-detail__icon" aria-hidden="true">
@@ -32,7 +52,9 @@ function ServicesPage() {
               </div>
               <div className="services-detail__text">
                 <h2>{title}</h2>
-                <p>{longDescription}</p>
+                {description.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
               </div>
             </article>
           ))}
@@ -61,7 +83,9 @@ function ServicesPage() {
       <section className="services-faq">
         <div className="container">
           <p className="services-faq__eyebrow">Dudas frecuentes</p>
-          <h2 className="services-faq__title">Preguntas sobre nuestros servicios</h2>
+          <h2 className="services-faq__title">
+            Preguntas sobre nuestros servicios
+          </h2>
           <Accordion items={FAQ_ITEMS} />
         </div>
       </section>

@@ -4,6 +4,12 @@
   background-color: var(--color-bg);
 }
 
+.services-detail__intro {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 720px;
+}
+
 .services-detail__row {
   display: grid;
   grid-template-columns: 120px 1fr;
@@ -11,10 +17,6 @@
   align-items: start;
   padding: var(--space-lg) 0;
   border-bottom: 1px solid var(--color-border);
-}
-
-.services-detail__row:first-child {
-  padding-top: 0;
 }
 
 .services-detail__row--reverse {
@@ -48,6 +50,11 @@
   font-size: var(--text-base);
   color: var(--color-text-muted);
   max-width: 600px;
+}
+
+/* Separación entre los párrafos de cada servicio */
+.services-detail__text p + p {
+  margin-top: var(--space-sm);
 }
 
 /* ---- Proceso ---- */

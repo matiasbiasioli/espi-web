@@ -21,15 +21,23 @@ function Accordion({ items }) {
               onClick={() => toggle(index)}
             >
               <span>{item.question}</span>
-              <span className={isOpen ? "accordion-icon accordion-icon--open" : "accordion-icon"}>
+              <span
+                className={
+                  isOpen ? "accordion-icon accordion-icon--open" : "accordion-icon"
+                }
+              >
                 +
               </span>
             </button>
+
             <div
-              className="accordion-panel"
-              style={{ maxHeight: isOpen ? "200px" : "0px" }}
+              className={
+                isOpen ? "accordion-panel accordion-panel--open" : "accordion-panel"
+              }
             >
-              <p>{item.answer}</p>
+              <div className="accordion-panel__inner">
+                <p>{item.answer}</p>
+              </div>
             </div>
           </div>
         );

@@ -38,6 +38,11 @@
   padding: var(--space-lg);
 }
 
+/* Con cantidad impar de tarjetas, la última ocupa todo el ancho */
+.services__card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .services__mark {
   width: 40px;
   height: 40px;
@@ -58,11 +63,17 @@
   margin-bottom: var(--space-xs);
 }
 
-.services__card-copy {
+.services__card-link {
+  display: inline-block;
   font-size: var(--text-sm);
-  color: var(--color-white);
-  opacity: 0.6;
-  font-style: italic;
+  font-weight: 500;
+  color: var(--color-yellow);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.services__card-link:hover {
+  border-bottom-color: var(--color-yellow);
 }
 
 @media (max-width: 640px) {

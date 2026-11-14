@@ -19,7 +19,7 @@
   text-align: left;
   padding: var(--space-md) 0;
   font-family: var(--font-heading);
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   font-weight: 500;
   color: var(--color-text);
 }
@@ -36,15 +36,26 @@
   transform: rotate(45deg);
 }
 
+/* Animar de 0fr a 1fr hace que el panel crezca hasta su altura real */
 .accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.accordion-panel--open {
+  grid-template-rows: 1fr;
+}
+
+.accordion-panel__inner {
   overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.3s ease;
 }
 
 .accordion-panel p {
-  font-size: var(--text-sm);
+  font-size: var(--text-lg);
+  line-height: 1.6;
   color: var(--color-text-muted);
   padding-bottom: var(--space-md);
-  max-width: 640px;
+  max-width: 90%;
+  white-space: pre-line;
 }

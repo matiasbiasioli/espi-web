@@ -1,105 +1,154 @@
-/* ---- Origen ---- */
-.institutional-origin {
+/* ---- Línea de tiempo ---- */
+.institutional-timeline {
   padding: var(--space-2xl) 0;
   background-color: var(--color-bg);
 }
 
-.institutional-origin__inner {
-  max-width: 760px;
+.institutional-timeline__list {
+  max-width: 900px;
 }
 
-.institutional-origin__title {
-  font-family: var(--font-heading);
-  font-size: var(--text-3xl);
-  font-weight: 700;
-  color: var(--color-text);
-  margin-bottom: var(--space-lg);
-  line-height: 1.25;
+.institutional-timeline__item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
-.institutional-accent {
+.institutional-timeline__item:first-child {
+  padding-top: 0;
+}
+
+.institutional-timeline__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.institutional-timeline__year {
   font-family: var(--font-display);
   font-style: italic;
+  font-size: var(--text-3xl);
   color: var(--color-olive);
+  line-height: 1;
 }
 
-.institutional-origin__text {
-  font-size: var(--text-base);
-  color: var(--color-text-muted);
+.institutional-timeline__body h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: var(--color-text);
   margin-bottom: var(--space-sm);
 }
 
-/* ---- Pilares ---- */
-.institutional-pillars {
+.institutional-timeline__body p {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+}
+
+.institutional-timeline__stat {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  background-color: var(--color-yellow);
+  color: var(--color-bg-dark);
+  border-radius: var(--radius-full);
+  padding: var(--space-xs) var(--space-md);
+}
+
+.institutional-timeline__stat strong {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  line-height: 1;
+}
+
+.institutional-timeline__stat span {
+  font-size: var(--text-sm);
+}
+
+/* ---- Trabajo en equipo ---- */
+.institutional-teamwork {
   background-color: var(--color-bg-dark);
   color: var(--color-white);
   padding: var(--space-2xl) 0;
 }
 
-.institutional-pillars__eyebrow {
+.institutional-teamwork__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.institutional-teamwork__eyebrow {
   font-size: var(--text-sm);
   font-style: italic;
   color: var(--color-yellow);
   margin-bottom: var(--space-xs);
 }
 
-.institutional-pillars__title {
+.institutional-teamwork__title {
   font-family: var(--font-heading);
   font-size: var(--text-3xl);
   font-weight: 700;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
-.institutional-pillars__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.institutional-teamwork__text {
+  font-size: var(--text-base);
+  opacity: 0.85;
+}
+
+.institutional-teamwork__list li {
+  display: flex;
+  align-items: baseline;
   gap: var(--space-md);
-}
-
-.institutional-pillars__card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
-}
-
-.institutional-pillars__card h3 {
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   font-family: var(--font-heading);
   font-size: var(--text-lg);
-  margin-bottom: var(--space-xs);
 }
 
-.institutional-pillars__card p {
+.institutional-teamwork__list li:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.institutional-teamwork__list span {
   font-size: var(--text-sm);
-  opacity: 0.75;
+  color: var(--color-yellow);
 }
 
-/* ---- Cita ---- */
-.institutional-quote {
+/* ---- Compromiso ---- */
+.institutional-commitment {
   padding: var(--space-2xl) 0;
   background-color: var(--color-bg);
 }
 
-.institutional-quote__box {
+.institutional-commitment__box {
   background-color: var(--color-yellow);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
-  margin: 0;
-  max-width: 720px;
+  max-width: 900px;
   margin-inline: auto;
 }
 
-.institutional-quote__box p {
+.institutional-commitment__lead {
   font-family: var(--font-display);
   font-style: italic;
   font-size: var(--text-xl);
   color: var(--color-bg-dark);
   line-height: 1.4;
+  margin-bottom: var(--space-md);
+}
+
+.institutional-commitment__text {
+  font-size: var(--text-base);
+  color: var(--color-bg-dark);
 }
 
 /* ---- CTA ---- */
 .institutional-cta {
-  padding: var(--space-2xl) 0 var(--space-2xl);
+  padding: var(--space-2xl) 0;
   background-color: var(--color-bg);
   border-top: 1px solid var(--color-border);
 }
@@ -119,9 +168,26 @@
   max-width: 480px;
 }
 
+.institutional-cta__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
 @media (max-width: 768px) {
-  .institutional-pillars__grid {
+  .institutional-timeline__item {
     grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .institutional-teamwork__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .institutional-commitment__box {
+    padding: var(--space-lg);
   }
 
   .institutional-cta__inner {

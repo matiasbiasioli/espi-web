@@ -1,6 +1,12 @@
 .page-hero {
+  background-color: var(--color-bg);
+  padding: var(--space-sm);
+}
+
+.page-hero__box {
   background-color: var(--color-bg-dark);
   color: var(--color-white);
+  border-radius: var(--radius-lg);
   padding: var(--space-xl) 0;
 }
 
@@ -19,6 +25,11 @@
 }
 
 @media (max-width: 768px) {
+  .page-hero__box {
+    border-radius: var(--radius-md);
+    padding: var(--space-lg) 0;
+  }
+
   .page-hero__title {
     font-size: var(--text-3xl);
   }
