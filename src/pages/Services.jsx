@@ -4,6 +4,14 @@ import Button from "../components/ui/Button";
 import { SERVICES, SERVICES_INTRO } from "../data/servicesData";
 import "./Services.css";
 
+// Adaptamos los servicios al formato del acordeón
+const SERVICE_ITEMS = SERVICES.map(({ title, icon, description }) => ({
+  question: title,
+  icon,
+  answer: description,
+  hint: "Expandir para conocer más",
+}));
+
 const PROCESS_STEPS = [
   {
     title: "Admisión personalizada",
@@ -38,26 +46,9 @@ function ServicesPage() {
         <div className="container">
           <p className="services-detail__intro">{SERVICES_INTRO}</p>
 
-          {SERVICES.map(({ id, title, description, icon }, index) => (
-            <article
-              className={
-                index % 2 === 1
-                  ? "services-detail__row services-detail__row--reverse"
-                  : "services-detail__row"
-              }
-              key={id}
-            >
-              <div className="services-detail__icon" aria-hidden="true">
-                {icon}
-              </div>
-              <div className="services-detail__text">
-                <h2>{title}</h2>
-                {description.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-            </article>
-          ))}
+          <div className="services-detail__list">
+            <Accordion items={SERVICE_ITEMS} />
+          </div>
         </div>
       </section>
 

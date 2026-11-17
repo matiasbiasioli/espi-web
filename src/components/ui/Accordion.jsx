@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./Accordion.css";
 
+// Cada item: { question, answer, icon?, hint? }
+// - answer puede ser un texto o una lista de párrafos
+// - icon (opcional) se muestra a la izquierda del título
+// - hint (opcional) es el texto chico a la derecha mientras está cerrado
 function Accordion({ items }) {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -12,6 +16,7 @@ function Accordion({ items }) {
     <div className="accordion">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
+        const paragraphs = Array.isArray(item.answer) ? item.answer : [item.answer];
 
         return (
           <div className="accordion-item" key={item.question}>
@@ -20,13 +25,26 @@ function Accordion({ items }) {
               aria-expanded={isOpen}
               onClick={() => toggle(index)}
             >
-              <span>{item.question}</span>
-              <span
-                className={
-                  isOpen ? "accordion-icon accordion-icon--open" : "accordion-icon"
-                }
-              >
-                +
+              <span className="accordion-question">
+                {item.icon && (
+                  <span className="accordion-lead-icon" aria-hidden="true">
+                    {item.icon}
+                  </span>
+                )}
+                {item.question}
+              </span>
+
+              <span className="accordion-end">
+                {item.hint && !isOpen && (
+                  <span className="accordion-hint">{item.hint}</span>
+                )}
+                <span
+                  className={
+                    isOpen ? "accordion-icon accordion-icon--open" : "accordion-icon"
+                  }
+                >
+                  +
+                </span>
               </span>
             </button>
 
@@ -36,7 +54,9 @@ function Accordion({ items }) {
               }
             >
               <div className="accordion-panel__inner">
-                <p>{item.answer}</p>
+                {paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
               </div>
             </div>
           </div>

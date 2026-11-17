@@ -10,51 +10,28 @@
   max-width: 720px;
 }
 
-.services-detail__row {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: var(--space-lg);
-  align-items: start;
-  padding: var(--space-lg) 0;
-  border-bottom: 1px solid var(--color-border);
+.services-detail__list {
+  margin-top: var(--space-xl);
 }
 
-.services-detail__row--reverse {
-  direction: rtl;
-}
-
-.services-detail__row--reverse .services-detail__text,
-.services-detail__row--reverse .services-detail__icon {
-  direction: ltr;
-}
-
-.services-detail__icon {
-  width: 64px;
-  height: 64px;
-  color: var(--color-olive);
-}
-
-.services-detail__icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.services-detail__text h2 {
-  font-family: var(--font-heading);
+/* Versión grande del acordeón, solo para los servicios */
+.services-detail__list .accordion-trigger {
   font-size: var(--text-2xl);
-  color: var(--color-text);
-  margin-bottom: var(--space-xs);
+  padding: var(--space-lg) 0;
 }
 
-.services-detail__text p {
-  font-size: var(--text-base);
-  color: var(--color-text-muted);
-  max-width: 600px;
+.services-detail__list .accordion-lead-icon {
+  width: 40px;
+  height: 40px;
 }
 
-/* Separación entre los párrafos de cada servicio */
-.services-detail__text p + p {
-  margin-top: var(--space-sm);
+/* El texto desplegado queda alineado con el título, no con el ícono */
+.services-detail__list .accordion-panel__inner {
+  padding-left: calc(40px + var(--space-md));
+}
+
+.services-detail__list .accordion-panel p {
+  max-width: 720px;
 }
 
 /* ---- Proceso ---- */
@@ -158,10 +135,17 @@
 }
 
 @media (max-width: 768px) {
-  .services-detail__row,
-  .services-detail__row--reverse {
-    grid-template-columns: 1fr;
-    direction: ltr;
+  .services-detail__list .accordion-trigger {
+    font-size: var(--text-xl);
+  }
+
+  .services-detail__list .accordion-lead-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .services-detail__list .accordion-panel__inner {
+    padding-left: 0;
   }
 
   .services-cta__inner {
