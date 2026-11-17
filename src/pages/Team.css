@@ -1,27 +1,10 @@
 .team-page {
-  padding: var(--space-2xl) 0;
+  padding: var(--space-xl) 0 var(--space-2xl);
   background-color: var(--color-bg);
-}
-
-.team-page__eyebrow {
-  font-size: var(--text-sm);
-  font-style: italic;
-  color: var(--color-olive);
-  margin-bottom: var(--space-xs);
-}
-
-.team-page__title {
-  font-family: var(--font-heading);
-  font-size: var(--text-3xl);
-  font-weight: 700;
-  color: var(--color-text);
-  margin-bottom: var(--space-md);
 }
 
 .team-page__intro {
   max-width: 720px;
   font-size: var(--text-lg);
   color: var(--color-text-muted);
-  margin-bottom: var(--space-lg);
 }
-
