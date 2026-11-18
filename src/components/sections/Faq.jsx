@@ -32,8 +32,7 @@ function Faq() {
   return (
     <section className="faq">
       <div className="container">
-        <p className="faq__eyebrow">Preguntas frecuentes</p>
-        <h2 className="faq__title">FAQ</h2>
+        <h2 className="faq__title">Preguntas Frecuentes</h2>
         <Accordion items={FAQ_ITEMS} />
       </div>
     </section>

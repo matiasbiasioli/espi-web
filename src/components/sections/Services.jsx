@@ -7,8 +7,7 @@ function Services() {
     <section className="services">
       <div className="services__box">
         <div className="container">
-          <p className="services__eyebrow">Qué ofrecemos</p>
-          <h2 className="services__title">Servicios</h2>
+          <h2 className="services__title">Qué ofrecemos</h2>
 
           <div className="services__grid">
             {SERVICES.map(({ id, title, icon }) => (

@@ -1,90 +1,148 @@
-.services {
+/* ---- Detalle de cada servicio ---- */
+.services-detail {
+  padding: var(--space-2xl) 0;
   background-color: var(--color-bg);
-  padding: var(--space-sm);
 }
 
-.services__box {
+.services-detail__intro {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 720px;
+}
+
+.services-detail__list {
+  margin-top: var(--space-xl);
+}
+
+/* Versión grande del acordeón, solo para los servicios */
+.services-detail__list .accordion-trigger {
+  font-size: var(--text-2xl);
+  padding: var(--space-lg) 0;
+}
+
+.services-detail__list .accordion-lead-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* El texto desplegado queda alineado con el título, no con el ícono */
+.services-detail__list .accordion-panel__inner {
+  padding-left: calc(40px + var(--space-md));
+}
+
+.services-detail__list .accordion-panel p {
+  max-width: 720px;
+}
+
+/* ---- Proceso ---- */
+.services-process {
   background-color: var(--color-bg-dark);
   color: var(--color-white);
-  border-radius: var(--radius-lg);
   padding: var(--space-2xl) 0;
 }
 
-.services__eyebrow {
-  font-size: var(--text-sm);
-  font-style: italic;
-  color: var(--color-yellow);
-  margin-bottom: var(--space-xs);
-}
-
-.services__title {
+.services-process__title {
   font-family: var(--font-heading);
   font-size: var(--text-3xl);
-  font-weight: 700;
-  color: var(--color-white);
   margin-bottom: var(--space-lg);
 }
 
-.services__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.services-process__steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.services-process__step {
+  display: flex;
   gap: var(--space-md);
+  align-items: flex-start;
 }
 
-.services__card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
-}
-
-/* Con cantidad impar de tarjetas, la última ocupa todo el ancho */
-.services__card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-}
-
-.services__mark {
+.services-process__number {
+  flex-shrink: 0;
   width: 40px;
   height: 40px;
-  color: var(--color-yellow);
-  margin-bottom: var(--space-md);
+  border-radius: var(--radius-full);
+  background-color: var(--color-yellow);
+  color: var(--color-bg-dark);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.services__mark svg {
-  width: 100%;
-  height: 100%;
-}
-
-.services__card-title {
+.services-process__step h3 {
   font-family: var(--font-heading);
   font-size: var(--text-lg);
-  font-weight: 600;
-  color: var(--color-white);
+  margin-bottom: 2px;
+}
+
+.services-process__step p {
+  font-size: var(--text-sm);
+  opacity: 0.8;
+  max-width: 500px;
+}
+
+/* ---- FAQ ---- */
+.services-faq {
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-bg);
+}
+
+.services-faq__eyebrow {
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-olive);
   margin-bottom: var(--space-xs);
 }
 
-.services__card-link {
-  display: inline-block;
-  font-size: var(--text-sm);
-  font-weight: 500;
-  color: var(--color-yellow);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+.services-faq__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  color: var(--color-text);
+  margin-bottom: var(--space-lg);
 }
 
-.services__card-link:hover {
-  border-bottom-color: var(--color-yellow);
+/* ---- CTA ---- */
+.services-cta {
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
 }
 
-@media (max-width: 640px) {
-  .services__grid {
-    grid-template-columns: 1fr;
-  }
+.services-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.services-cta__inner h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: var(--color-text);
+  max-width: 480px;
 }
 
 @media (max-width: 768px) {
-  .services__box {
-    border-radius: var(--radius-md);
-    padding: var(--space-xl) 0;
+  .services-detail__list .accordion-trigger {
+    font-size: var(--text-xl);
+  }
+
+  .services-detail__list .accordion-lead-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .services-detail__list .accordion-panel__inner {
+    padding-left: 0;
+  }
+
+  .services-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
