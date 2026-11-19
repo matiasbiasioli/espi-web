@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import PageHero from "../components/sections/PageHero";
 import Accordion from "../components/ui/Accordion";
 import Button from "../components/ui/Button";
@@ -5,7 +7,8 @@ import { SERVICES, SERVICES_INTRO } from "../data/servicesData";
 import "./Services.css";
 
 // Adaptamos los servicios al formato del acordeón
-const SERVICE_ITEMS = SERVICES.map(({ title, icon, description }) => ({
+const SERVICE_ITEMS = SERVICES.map(({ id, title, icon, description }) => ({
+  id,
   question: title,
   icon,
   answer: description,
@@ -38,6 +41,23 @@ const FAQ_ITEMS = [
 ];
 
 function ServicesPage() {
+  // Si la URL es /servicios#talleres, openId vale "talleres"
+  const { hash } = useLocation();
+  const openId = hash.replace("#", "");
+
+  // Baja hasta el servicio indicado (con una pausa corta para que la página termine de cargar)
+  useEffect(() => {
+    if (!openId) return;
+
+    const timer = setTimeout(() => {
+      document
+        .getElementById(openId)
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [openId]);
+
   return (
     <>
       <PageHero eyebrow="Qué ofrecemos" title="Servicios" />
@@ -47,7 +67,12 @@ function ServicesPage() {
           <p className="services-detail__intro">{SERVICES_INTRO}</p>
 
           <div className="services-detail__list">
-            <Accordion items={SERVICE_ITEMS} />
+            {/* key={openId}: si cambia el ancla, el acordeón se rearma con ese ítem abierto */}
+            <Accordion
+              key={openId}
+              items={SERVICE_ITEMS}
+              initialOpenId={openId}
+            />
           </div>
         </div>
       </section>

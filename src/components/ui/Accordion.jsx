@@ -1,12 +1,15 @@
 import { useState } from "react";
 import "./Accordion.css";
 
-// Cada item: { question, answer, icon?, hint? }
-// - answer puede ser un texto o una lista de párrafos
-// - icon (opcional) se muestra a la izquierda del título
-// - hint (opcional) es el texto chico a la derecha mientras está cerrado
-function Accordion({ items }) {
-  const [openIndex, setOpenIndex] = useState(null);
+// Cada item: { id?, question, answer, icon?, hint? }
+// - id (opcional): permite llegar a ese ítem con un ancla (#id)
+// - initialOpenId (opcional): ítem que arranca abierto
+function Accordion({ items, initialOpenId }) {
+  const [openIndex, setOpenIndex] = useState(() => {
+    if (!initialOpenId) return null;
+    const index = items.findIndex((item) => item.id === initialOpenId);
+    return index === -1 ? null : index;
+  });
 
   const toggle = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));
@@ -19,7 +22,7 @@ function Accordion({ items }) {
         const paragraphs = Array.isArray(item.answer) ? item.answer : [item.answer];
 
         return (
-          <div className="accordion-item" key={item.question}>
+          <div className="accordion-item" id={item.id} key={item.question}>
             <button
               className="accordion-trigger"
               aria-expanded={isOpen}
