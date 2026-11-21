@@ -46,7 +46,7 @@
 }
 
 .about__eyebrow {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-style: italic;
   color: var(--color-olive);
   margin-bottom: var(--space-sm);
@@ -69,7 +69,7 @@
 }
 
 .about__paragraph {
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   color: var(--color-text-muted);
   margin-bottom: var(--space-sm);
 }

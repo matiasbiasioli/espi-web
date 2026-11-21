@@ -10,26 +10,25 @@ function Services() {
         <div className="container">
           <h2 className="services__title">Qué ofrecemos</h2>
 
-          <div className="services__grid">
-            {SERVICES.map(({ id, title, icon }, index) => (
-              <article className="services__card" key={id}>
-                <div className="services__card-top">
-                  <div className="services__card-top">
-                    <div className="services__mark" aria-hidden="true">
-                      {icon}
-                    </div>
-                  </div>
-                </div>
+          <ul className="services__list">
+            {SERVICES.map(({ id, title, icon }) => (
+              <li key={id}>
+                {/* La fila entera es el link: ícono | nombre | "Conocer más" */}
+                <Link to={`/servicios#${id}`} className="services__row">
+                  <span className="services__mark" aria-hidden="true">
+                    {icon}
+                  </span>
 
-                <h3 className="services__card-title">{title}</h3>
+                  <h3 className="services__row-title">{title}</h3>
 
-                <Link to={`/servicios#${id}`} className="services__card-link">
-                  Conocer más
-                  <LuArrowRight aria-hidden="true" />
+                  <span className="services__row-cta">
+                    <span className="services__row-label">Conocer más</span>
+                    <LuArrowRight aria-hidden="true" />
+                  </span>
                 </Link>
-              </article>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

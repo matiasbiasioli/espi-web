@@ -18,108 +18,112 @@
   margin-bottom: var(--space-lg);
 }
 
-/* Fila flexible: las tarjetas que sobran en la última fila quedan centradas */
-.services__grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-md);
-}
-
-.services__card {
-  position: relative; /* necesario para que el link ocupe toda la tarjeta */
-  /* 3 tarjetas por fila: (ancho - 2 espacios) / 3 */
-  flex: 0 0 calc((100% - var(--space-md) * 2) / 3);
+/* Lista de filas, una debajo de otra */
+.services__list {
   display: flex;
   flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* Cada fila: tarjeta redondeada de ancho completo */
+.services__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
   background-color: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
+  border-radius: var(--radius-lg); /* probá var(--radius-full) para forma de píldora */
+  color: var(--color-white);
   transition:
-    transform 0.25s ease,
     background-color 0.25s ease,
-    border-color 0.25s ease;
+    border-color 0.25s ease,
+    color 0.25s ease;
 }
 
-.services__card:hover,
-.services__card:focus-within {
-  transform: translateY(-4px);
-  background-color: rgba(255, 255, 255, 0.1);
+/* Al pasar el mouse (o navegar con teclado): la fila se rellena de amarillo */
+.services__row:hover,
+.services__row:focus-visible {
+  background-color: var(--color-yellow);
   border-color: var(--color-yellow);
+  color: var(--color-bg-dark);
 }
 
-/* Ícono a la izquierda, número a la derecha */
-.services__card-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: var(--space-md);
+.services__row:focus-visible {
+  outline: 2px solid var(--color-yellow);
+  outline-offset: 3px;
 }
 
 /* Círculo amarillo con el ícono en Carbón */
 .services__mark {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 56px;
   height: 56px;
   border-radius: var(--radius-full);
   background-color: var(--color-yellow);
   color: var(--color-bg-dark);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 .services__mark svg {
-  position: relative;
-  z-index: 1;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   fill: none;
   stroke: var(--color-bg-dark);
+  transition: stroke 0.25s ease;
 }
 
-.services__card-title {
+/* Con la fila amarilla, el círculo se invierte: Carbón con el ícono amarillo */
+.services__row:hover .services__mark,
+.services__row:focus-visible .services__mark {
+  background-color: var(--color-bg-dark);
+}
+
+.services__row:hover .services__mark svg,
+.services__row:focus-visible .services__mark svg {
+  stroke: var(--color-yellow);
+}
+
+/* Nombre del servicio: ocupa el espacio del medio */
+.services__row-title {
+  flex: 1;
   font-family: var(--font-heading);
   font-size: var(--text-xl);
   font-weight: 600;
-  color: var(--color-white);
-  margin-bottom: var(--space-md);
+  color: inherit;
 }
 
-/* margin-top: auto empuja el link al fondo de la tarjeta */
-.services__card-link {
-  display: inline-flex;
+/* "Conocer más" + flecha, a la derecha */
+.services__row-cta {
+  display: flex;
   align-items: center;
   gap: var(--space-xs);
-  align-self: flex-start;
-  margin-top: auto;
-  font-size: var(--text-sm);
+  flex-shrink: 0;
+  font-size: var(--text-base);
   font-weight: 500;
   color: var(--color-yellow);
+  transition: color 0.25s ease;
 }
 
-.services__card-link svg {
+.services__row-cta svg {
+  width: 20px;
+  height: 20px;
   transition: transform 0.25s ease;
 }
 
-.services__card:hover .services__card-link svg {
-  transform: translateX(4px);
+.services__row:hover .services__row-cta,
+.services__row:focus-visible .services__row-cta {
+  color: var(--color-bg-dark);
 }
 
-/* Link estirado: el área clickeable es toda la tarjeta */
-.services__card-link::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-md);
-}
-
-/* Tablet: 2 por fila */
-@media (max-width: 900px) {
-  .services__card {
-    flex-basis: calc((100% - var(--space-md)) / 2);
-  }
+.services__row:hover .services__row-cta svg,
+.services__row:focus-visible .services__row-cta svg {
+  transform: translateX(6px);
 }
 
 @media (max-width: 768px) {
@@ -129,23 +133,43 @@
   }
 }
 
-/* Mobile: 1 por fila */
+/* Mobile: se oculta el texto "Conocer más" y queda la flecha */
 @media (max-width: 640px) {
-  .services__card {
-    flex-basis: 100%;
+  .services__row {
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+  }
+
+  .services__mark {
+    width: 48px;
+    height: 48px;
+  }
+
+  .services__mark svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .services__row-title {
+    font-size: var(--text-lg);
+  }
+
+  .services__row-label {
+    display: none;
   }
 }
 
 /* Respeta a quienes tienen desactivadas las animaciones en su sistema */
 @media (prefers-reduced-motion: reduce) {
-  .services__card,
-  .services__card-link svg {
+  .services__row,
+  .services__mark,
+  .services__row-cta,
+  .services__row-cta svg {
     transition: none;
   }
 
-  .services__card:hover,
-  .services__card:focus-within,
-  .services__card:hover .services__card-link svg {
+  .services__row:hover .services__row-cta svg,
+  .services__row:focus-visible .services__row-cta svg {
     transform: none;
   }
 }
