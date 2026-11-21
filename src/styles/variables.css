@@ -23,10 +23,11 @@
   --color-accent-tertiary: var(--color-sage);
   --color-border: var(--color-gray);
 
-  /* ---- Tipografías ---- */
-  --font-display: "Playfair Display", serif;  /* titulares y mensajes principales */
-  --font-heading: "Jost", sans-serif;          /* subtítulos, navegación */
-  --font-body: "Jost", sans-serif;             /* cuerpo de texto */
+/* ---- Tipografías ---- */
+--font-display: "Playfair Display", serif;  /* acentos en cursiva */
+--font-heading: "Playfair Display", serif;  /* títulos y mensajes principales */
+--font-body: "Jost", sans-serif;            /* cuerpo de texto */
+--font-ui: "Jost", sans-serif;              /* subtítulos, navegación, detalles de interfaz */
 
   /* ---- Escala tipográfica ---- */
   --text-xs: 0.75rem;

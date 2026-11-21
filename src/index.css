@@ -28,10 +28,19 @@ body {
 }
 
 h1,
+h2 {
+  font-family: var(--font-heading);
+}
+
+h3,
+h4 {
+  font-family: var(--font-ui);
+}
+
+h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-heading);
   line-height: 1.15;
   margin: 0;
 }
