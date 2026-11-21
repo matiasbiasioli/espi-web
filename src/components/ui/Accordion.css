@@ -19,7 +19,7 @@
   border: none;
   text-align: left;
   padding: var(--space-md) 0;
-  font-family: var(--font-heading);
+  font-family: var(--font-ui);
   font-size: var(--text-lg);
   font-weight: 500;
   color: var(--color-text);

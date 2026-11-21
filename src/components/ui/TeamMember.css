@@ -54,7 +54,7 @@
 }
 
 .team-member__name {
-  font-family: var(--font-heading);
+  font-family: var(--font-ui);
   font-size: var(--text-2xl);
   font-weight: 600;
   color: var(--color-text);

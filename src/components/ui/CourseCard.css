@@ -41,7 +41,7 @@
 }
 
 .course-card__title {
-  font-family: var(--font-heading);
+  font-family: var(--font-ui);
   font-size: var(--text-lg);
   font-weight: 600;
   color: var(--color-text);

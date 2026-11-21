@@ -92,7 +92,7 @@
 /* Nombre del servicio: ocupa el espacio del medio */
 .services__row-title {
   flex: 1;
-  font-family: var(--font-heading);
+  font-family: var(--font-ui);
   font-size: var(--text-xl);
   font-weight: 600;
   color: inherit;

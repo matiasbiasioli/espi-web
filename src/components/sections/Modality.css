@@ -54,7 +54,7 @@
 }
 
 .modality__placeholder span {
-  font-family: var(--font-heading);
+  font-family: var(--font-ui);
   font-size: var(--text-sm);
   color: var(--color-bg-dark);
   opacity: 0.6;
