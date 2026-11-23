@@ -4,72 +4,115 @@
   background-color: var(--color-bg);
 }
 
+/* Tres columnas; la línea horizontal pasa por detrás de los puntos */
 .institutional-timeline__list {
-  max-width: 900px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.institutional-timeline__list::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-border);
 }
 
 .institutional-timeline__item {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: var(--space-lg);
-  padding: var(--space-xl) 0;
-  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  padding-top: var(--space-lg);
+  display: flex;
 }
 
-.institutional-timeline__item:first-child {
-  padding-top: 0;
+/* Punto amarillo con borde Carbón */
+.institutional-timeline__dot {
+  position: absolute;
+  top: 0;
+  left: var(--space-lg);
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-yellow);
+  border: 3px solid var(--color-bg-dark);
 }
 
-.institutional-timeline__item:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+/* Tarjeta: las tres del mismo alto */
+.institutional-timeline__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .institutional-timeline__year {
   font-family: var(--font-display);
   font-style: italic;
   font-size: var(--text-3xl);
-  color: var(--color-olive);
   line-height: 1;
+  color: var(--color-olive);
+  margin-bottom: var(--space-sm);
 }
 
-.institutional-timeline__body h2 {
-  font-family: var(--font-heading);
-  font-size: var(--text-2xl);
+.institutional-timeline__card h2 {
+  font-family: var(--font-ui);
+  font-size: var(--text-xl);
+  font-weight: 600;
   color: var(--color-text);
   margin-bottom: var(--space-sm);
 }
 
-.institutional-timeline__body p {
+.institutional-timeline__card p {
   font-size: var(--text-base);
   color: var(--color-text-muted);
 }
 
+/* "+15" grande con subrayado amarillo tipo marcador, siempre al pie de la tarjeta */
 .institutional-timeline__stat {
-  display: inline-flex;
+  margin-top: auto;
+  padding-top: var(--space-md);
+  display: flex;
   align-items: center;
   gap: var(--space-sm);
+}
+
+.institutional-timeline__card p + .institutional-timeline__stat {
   margin-top: var(--space-md);
-  background-color: var(--color-yellow);
-  color: var(--color-bg-dark);
-  border-radius: var(--radius-full);
-  padding: var(--space-xs) var(--space-md);
+  border-top: 1px solid var(--color-border);
 }
 
 .institutional-timeline__stat strong {
-  font-family: var(--font-ui);
-  font-size: var(--text-2xl);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-4xl);
   line-height: 1;
+  color: var(--color-text);
+  background: linear-gradient(transparent 62%, var(--color-yellow) 62%);
+  padding: 0 var(--space-xs);
 }
 
 .institutional-timeline__stat span {
   font-size: var(--text-sm);
+  color: var(--color-text-muted);
 }
 
-/* ---- Trabajo en equipo ---- */
+/* ---- Trabajo en equipo (caja redondeada) ---- */
 .institutional-teamwork {
+  background-color: var(--color-bg);
+  padding: var(--space-sm);
+}
+
+.institutional-teamwork__box {
   background-color: var(--color-bg-dark);
   color: var(--color-white);
+  border-radius: var(--radius-lg);
   padding: var(--space-2xl) 0;
 }
 
@@ -81,7 +124,7 @@
 }
 
 .institutional-teamwork__eyebrow {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-style: italic;
   color: var(--color-yellow);
   margin-bottom: var(--space-xs);
@@ -90,32 +133,39 @@
 .institutional-teamwork__title {
   font-family: var(--font-heading);
   font-size: var(--text-3xl);
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: var(--space-md);
 }
 
 .institutional-teamwork__text {
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
+  line-height: 1.7;
   opacity: 0.85;
+}
+
+/* Los cinco puntos como píldoras */
+.institutional-teamwork__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
 }
 
 .institutional-teamwork__list li {
   display: flex;
-  align-items: baseline;
-  gap: var(--space-md);
-  padding: var(--space-md) 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
   font-family: var(--font-ui);
   font-size: var(--text-lg);
 }
 
-.institutional-teamwork__list li:first-child {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.institutional-teamwork__list span {
-  font-size: var(--text-sm);
-  color: var(--color-yellow);
+.institutional-teamwork__list svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--color-sage);
 }
 
 /* ---- Compromiso ---- */
@@ -175,10 +225,37 @@
   flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-  .institutional-timeline__item {
+/* Tablet y celular: tarjetas apiladas y línea vertical a la izquierda */
+@media (max-width: 900px) {
+  .institutional-timeline__list {
     grid-template-columns: 1fr;
-    gap: var(--space-sm);
+    gap: var(--space-md);
+  }
+
+  .institutional-timeline__list::before {
+    top: 0;
+    bottom: 0;
+    left: 8px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .institutional-timeline__item {
+    padding-top: 0;
+    padding-left: var(--space-lg);
+  }
+
+  .institutional-timeline__dot {
+    top: var(--space-lg);
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .institutional-teamwork__box {
+    border-radius: var(--radius-md);
+    padding: var(--space-xl) 0;
   }
 
   .institutional-teamwork__inner {

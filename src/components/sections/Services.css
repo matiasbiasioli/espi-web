@@ -15,7 +15,41 @@
   font-size: var(--text-3xl);
   font-weight: 700;
   color: var(--color-white);
+  margin-bottom: var(--space-sm);
+}
+
+/* ---- Presencial y online (arriba, debajo del título) ---- */
+.services__intro {
+  max-width: 100%;
+  font-size: var(--text-lg);
+  color: var(--color-white);
+  opacity: 0.8;
+  margin-bottom: var(--space-md);
+}
+
+.services__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
   margin-bottom: var(--space-lg);
+}
+
+.services__tags li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  color: var(--color-white);
+}
+
+.services__tags svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--color-sage);
 }
 
 /* Lista de filas, una debajo de otra */

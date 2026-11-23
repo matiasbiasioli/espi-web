@@ -1,3 +1,4 @@
+import { LuCircleCheck } from "react-icons/lu";
 import PageHero from "../components/sections/PageHero";
 import Button from "../components/ui/Button";
 import "./Institutional.css";
@@ -34,54 +35,59 @@ function Institutional() {
     <>
       <PageHero eyebrow="Quiénes somos" title="Nuestra historia" />
 
-      {/* Línea de tiempo */}
+      {/* Línea de tiempo: tres tarjetas unidas por una línea */}
       <section className="institutional-timeline">
         <div className="container">
           <ol className="institutional-timeline__list">
             {TIMELINE.map(({ year, title, text, stat }) => (
               <li className="institutional-timeline__item" key={year}>
-                <span className="institutional-timeline__year">{year}</span>
-                <div className="institutional-timeline__body">
+                <span className="institutional-timeline__dot" aria-hidden="true" />
+
+                <article className="institutional-timeline__card">
+                  <span className="institutional-timeline__year">{year}</span>
                   <h2>{title}</h2>
                   <p>{text}</p>
+
                   {stat && (
                     <div className="institutional-timeline__stat">
                       <strong>{stat.number}</strong>
                       <span>{stat.label}</span>
                     </div>
                   )}
-                </div>
+                </article>
               </li>
             ))}
           </ol>
         </div>
       </section>
 
-      {/* Trabajo en equipo */}
+      {/* Trabajo en equipo, en caja redondeada */}
       <section className="institutional-teamwork">
-        <div className="container institutional-teamwork__inner">
-          <div>
-            <p className="institutional-teamwork__eyebrow">Trabajo en equipo</p>
-            <h2 className="institutional-teamwork__title">Cómo trabajamos</h2>
-            <p className="institutional-teamwork__text">
-              Creemos que el trabajo en equipo es fundamental para sostener una
-              atención de calidad. Por eso, promovemos la articulación entre
-              profesionales, los espacios de discusión y reflexión clínica, los
-              ateneos, las supervisiones y la actualización permanente. Estas
-              instancias nos permiten compartir conocimientos, revisar nuestras
-              prácticas y construir criterios de acompañamiento de manera
-              conjunta.
-            </p>
-          </div>
+        <div className="institutional-teamwork__box">
+          <div className="container institutional-teamwork__inner">
+            <div>
+              <p className="institutional-teamwork__eyebrow">Trabajo en equipo</p>
+              <h2 className="institutional-teamwork__title">Cómo trabajamos</h2>
+              <p className="institutional-teamwork__text">
+                Creemos que el trabajo en equipo es fundamental para sostener
+                una atención de calidad. Por eso, promovemos la articulación
+                entre profesionales, los espacios de discusión y reflexión
+                clínica, los ateneos, las supervisiones y la actualización
+                permanente. Estas instancias nos permiten compartir
+                conocimientos, revisar nuestras prácticas y construir criterios
+                de acompañamiento de manera conjunta.
+              </p>
+            </div>
 
-          <ul className="institutional-teamwork__list">
-            {TEAMWORK.map((item, index) => (
-              <li key={item}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                {item}
-              </li>
-            ))}
-          </ul>
+            <ul className="institutional-teamwork__list">
+              {TEAMWORK.map((item) => (
+                <li key={item}>
+                  <LuCircleCheck aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
