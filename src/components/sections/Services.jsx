@@ -22,15 +22,6 @@ function Services() {
             se adapte a cada proceso.
           </p>
 
-          <ul className="services__tags">
-            {MODALITIES.map((item) => (
-              <li key={item}>
-                <LuCircleCheck aria-hidden="true" />
-                {item}
-              </li>
-            ))}
-          </ul>
-
           <ul className="services__list">
             {SERVICES.map(({ id, title, icon }) => (
               <li key={id}>
@@ -47,6 +38,15 @@ function Services() {
                     <LuArrowRight aria-hidden="true" />
                   </span>
                 </Link>
+              </li>
+            ))}
+          </ul>
+
+          <ul className="services__tags">
+            {MODALITIES.map((item) => (
+              <li key={item}>
+                <LuCircleCheck aria-hidden="true" />
+                {item}
               </li>
             ))}
           </ul>

@@ -23,12 +23,12 @@ const PROCESS_STEPS = [
   },
   {
     title: "Evaluación",
-    description: "[Lorem ipsum — descripción del paso de evaluación clínica.]",
+    description: "[Lorem ipsum — descripción.]",
   },
   {
     title: "Plan de acompañamiento",
     description:
-      "[Lorem ipsum — descripción de cómo se arma el plan de trabajo.]",
+      "[Lorem ipsum — descripción.]",
   },
 ];
 

@@ -8,7 +8,7 @@ import {
 
 
 export const SERVICES_INTRO =
-  "En ESPI ofrecemos distintas propuestas de acompañamiento que integran la medicina, la psicoterapia y las prácticas de autocuidado. Cada servicio parte de una mirada integral de la salud, respetando las necesidades, los tiempos y el contexto de cada persona.";
+"En ESPI ofrecemos distintas propuestas de acompañamiento que integran la medicina, la psicoterapia y las prácticas de autocuidado. Cada servicio parte de una mirada integral de la salud, respetando las necesidades, los tiempos y el contexto de cada persona.";
 
 export const SERVICES = [
   {

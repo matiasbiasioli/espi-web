@@ -170,7 +170,7 @@
 
 /* ---- Compromiso ---- */
 .institutional-commitment {
-  padding: var(--space-2xl) 0;
+  padding: var(--space-2xl) 0; 
   background-color: var(--color-bg);
 }
 
@@ -184,15 +184,16 @@
 
 .institutional-commitment__lead {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal; /* antes: italic */
+  font-weight: 500;
   font-size: var(--text-xl);
   color: var(--color-bg-dark);
-  line-height: 1.4;
+  line-height: 1.5; /* antes: 1.4 */
   margin-bottom: var(--space-md);
 }
 
 .institutional-commitment__text {
-  font-size: var(--text-base);
+  font-size: var(--text-lg); /* antes: var(--text-base) */
   color: var(--color-bg-dark);
 }
 

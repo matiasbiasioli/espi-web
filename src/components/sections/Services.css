@@ -31,7 +31,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
-  margin-bottom: var(--space-lg);
+  margin-top: var(--space-lg);
 }
 
 .services__tags li {

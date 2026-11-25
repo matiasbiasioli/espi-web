@@ -37,21 +37,48 @@
 .contact__links {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
 }
 
 .contact__link {
-  font-size: var(--text-sm);
-  color: var(--color-white);
-  opacity: 0.75;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
   width: fit-content;
+  font-size: var(--text-lg);
+  color: var(--color-white);
+  transition: color 0.2s ease;
 }
 
+/* Círculo con el ícono de la red */
+.contact__link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-full);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.contact__link-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Al pasar el mouse, el círculo se rellena de amarillo */
 .contact__link:hover {
-  opacity: 1;
   color: var(--color-yellow);
+}
+
+.contact__link:hover .contact__link-icon {
+  background-color: var(--color-yellow);
+  border-color: var(--color-yellow);
+  color: var(--color-bg-dark);
 }
 
 /* ---- Formulario minimalista ---- */
