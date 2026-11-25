@@ -14,18 +14,18 @@ const CONTACT_LINKS = [
   {
     // Cuando tengas el link real: cambiá el href y agregá external: true
     label: "YouTube",
-    href: "#",
+    href: "https://www.youtube.com/@espi.salud-canal",
     Icon: FaYoutube,
   },
   {
-    label: "contacto@ejemplo.com",
-    href: "mailto:contacto@ejemplo.com",
+    label: "espi.consultas@gmail.com",
+    href: "mailto:espi.consultas@gmail.com",
     Icon: LuMail,
   },
   {
     // Número sin +, espacios ni guiones en el href (wa.me/54911...)
-    label: "+54 9 11 0000-0000",
-    href: "https://wa.me/5491100000000",
+    label: "+54 9 112775-6906",
+    href: "https://wa.me/5491127756906",
     Icon: FaWhatsapp,
     external: true,
   },
